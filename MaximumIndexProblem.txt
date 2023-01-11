@@ -20,22 +20,22 @@ class Main
             }
             step--;
          }
-    if(cur<= 0)
-    {
-      return m;
-    }else
-    {
+         if(cur<= 0)
+         {
+           return m;
+         }else
+         {
           step=p;
-      cur=m-1;
-      m--;
-      if (cur == b)
-      {
-          cur = m - 1;
-  m--;
+          cur=m-1;
+          m--;
+            if (cur == b)
+             {
+              cur = m - 1;
+              m--;
+              }
+          }
       }
-    }
-     }
-}
+  }
   public static void main (String[]args) 
   {
       Scanner sc=new Scanner(System.in);
