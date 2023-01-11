@@ -1,0 +1,47 @@
+import java.util.*;
+import java.util.*;
+class Main
+{
+     static int maximumIndex (int step, int b) {
+      int m = 0;
+      for (int i = 1; i <= step; i++)
+      {
+          m+= i;
+      } 
+      int cur= m, p =step;
+      while (true)
+      {
+       while (cur>0&&step>0)
+         {
+            cur-=step;
+            if (cur==b)
+            {
+            cur+= step;
+            }
+            step--;
+         }
+    if(cur<= 0)
+    {
+      return m;
+    }else
+    {
+          step=p;
+      cur=m-1;
+      m--;
+      if (cur == b)
+      {
+          cur = m - 1;
+  m--;
+      }
+    }
+     }
+}
+  public static void main (String[]args) 
+  {
+      Scanner sc=new Scanner(System.in);
+      int step=sc.nextInt();
+      int badElement=sc.nextInt();
+      int result=maximumIndex(step,badElement);
+      System.out.println("Output: "+result);
+  }
+}
